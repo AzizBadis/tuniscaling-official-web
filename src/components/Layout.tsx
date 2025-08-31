@@ -36,13 +36,13 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/87c2d9d0-c576-412f-94ea-9000707424c4.png" 
-                alt="TuniScaling Logo" 
-                className="h-8 w-auto"
-              />
-            </Link>
+<Link to="/" className="flex items-center space-x-2">
+  <img 
+    src="/lovable-uploads/87c2d9d0-c576-412f-94ea-9000707424c4.png" 
+    alt="TuniScaling Logo" 
+    className="h-40 w-auto"  // Increased from h-8 to h-16
+  />
+</Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
@@ -148,7 +148,7 @@ export default function Layout({ children }: LayoutProps) {
               <img 
                 src="/lovable-uploads/87c2d9d0-c576-412f-94ea-9000707424c4.png" 
                 alt="TuniScaling Logo" 
-                className="h-8 w-auto"
+                className="h-40 w-auto"
               />
               <p className="text-sm text-muted-foreground">
                 {language === 'fr' 

@@ -75,10 +75,10 @@ export default function About() {
     },
     {
       name: "Saifeddine Soussi",
-      role: language === 'fr' ? 'Lead Développeur Mobile' : 'Lead Mobile Developer', 
+      role: language === 'fr' ? 'représentant des ventes' : 'sales representative', 
       bio: language === 'fr'
-        ? 'Expert en développement mobile avec une passion pour les interfaces utilisateur exceptionnelles et les performances optimales.'
-        : 'Mobile development expert with a passion for exceptional user interfaces and optimal performance.',
+        ? 'Expert en vente avec une passion pour établir des relations solides et dépasser les objectifs commerciaux.'
+        : 'Sales expert with a passion for building strong relationships and exceeding business targets.',
       image: "/api/placeholder/300/300",
       linkedin: "https://linkedin.com/in/mohamed-khaled",
       github: "https://github.com/mohamed-khaled"
