@@ -176,7 +176,7 @@ export default function Layout({ children }: LayoutProps) {
               <h3 className="font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>contact@tuniscaling.com</li>
-                <li>+216 XX XXX XXX</li>
+                <li>+216 25 021 538</li>
                 <li>Tunis, Tunisia</li>
               </ul>
             </div>

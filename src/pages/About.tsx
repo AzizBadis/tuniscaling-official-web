@@ -54,28 +54,27 @@ export default function About() {
 
   const team = [
     {
-      name: "Ahmed Ben Salem",
+      name: "Nidhal Haouari",
       role: language === 'fr' ? 'CEO & Fondateur' : 'CEO & Founder',
       bio: language === 'fr' 
         ? 'Expert en transformation digitale avec plus de 8 ans d\'expérience dans le développement de solutions technologiques innovantes.'
         : 'Digital transformation expert with over 8 years of experience in developing innovative technology solutions.',
       image: "/api/placeholder/300/300",
-      linkedin: "https://linkedin.com/in/ahmed-ben-salem",
-      github: "https://github.com/ahmed-ben-salem",
-      twitter: "https://twitter.com/ahmed_bs"
+      linkedin: "https://www.linkedin.com/in/nidhal-haouari-b1801124b/",
+      github: "https://github.com/nidhalhaouari"
     },
     {
-      name: "Leila Trabelsi", 
+      name: "Aziz Badis", 
       role: language === 'fr' ? 'Directrice Technique' : 'Technical Director',
       bio: language === 'fr'
         ? 'Spécialiste en architecture logicielle et intelligence artificielle. Lead technique sur nos projets les plus complexes.'
         : 'Software architecture and artificial intelligence specialist. Technical lead on our most complex projects.',
       image: "/api/placeholder/300/300",
-      linkedin: "https://linkedin.com/in/leila-trabelsi",
-      github: "https://github.com/leila-trabelsi"
+      linkedin: "https://www.linkedin.com/in/aziz-badis/",
+      github: "https://github.com/AzizBadis"
     },
     {
-      name: "Mohamed Khaled",
+      name: "Saifeddine Soussi",
       role: language === 'fr' ? 'Lead Développeur Mobile' : 'Lead Mobile Developer', 
       bio: language === 'fr'
         ? 'Expert en développement mobile avec une passion pour les interfaces utilisateur exceptionnelles et les performances optimales.'
@@ -84,54 +83,25 @@ export default function About() {
       linkedin: "https://linkedin.com/in/mohamed-khaled",
       github: "https://github.com/mohamed-khaled"
     },
-    {
-      name: "Fatma Bouali",
-      role: language === 'fr' ? 'Experte IA & Data Science' : 'AI & Data Science Expert',
-      bio: language === 'fr'
-        ? 'Docteure en Intelligence Artificielle, spécialisée dans le machine learning et l\'analyse de données complexes.'
-        : 'PhD in Artificial Intelligence, specialized in machine learning and complex data analysis.',
-      image: "/api/placeholder/300/300",
-      linkedin: "https://linkedin.com/in/fatma-bouali",
-      github: "https://github.com/fatma-bouali"
-    }
+
   ];
 
   const milestones = [
     {
-      year: "2020",
+      year: "2024",
       title: language === 'fr' ? 'Création de TuniScaling' : 'TuniScaling Founded',
       description: language === 'fr' 
         ? 'Lancement de notre agence avec une vision claire : démocratiser l\'accès aux technologies avancées'
         : 'Launch of our agency with a clear vision: democratize access to advanced technologies'
     },
     {
-      year: "2021", 
+      year: "2025", 
       title: language === 'fr' ? 'Premiers succès' : 'First Successes',
       description: language === 'fr'
         ? '25 projets livrés avec succès et établissement de partenariats stratégiques durables'
         : '25 successfully delivered projects and establishment of lasting strategic partnerships'
     },
-    {
-      year: "2022",
-      title: language === 'fr' ? 'Expansion des services' : 'Service Expansion',
-      description: language === 'fr'
-        ? 'Intégration de l\'intelligence artificielle et des solutions d\'automatisation à notre offre'
-        : 'Integration of artificial intelligence and automation solutions into our offering'
-    },
-    {
-      year: "2023",
-      title: language === 'fr' ? 'Reconnaissance internationale' : 'International Recognition',
-      description: language === 'fr'
-        ? 'Expansion vers les marchés européens et reconnaissance comme leader technologique régional'
-        : 'Expansion to European markets and recognition as a regional technology leader'
-    },
-    {
-      year: "2024",
-      title: language === 'fr' ? 'Innovation continue' : 'Continuous Innovation',
-      description: language === 'fr'
-        ? '100+ projets livrés, équipe de 15+ experts et lancement de nouvelles solutions IA'
-        : '100+ delivered projects, team of 15+ experts and launch of new AI solutions'
-    }
+    
   ];
 
   return (
@@ -165,7 +135,7 @@ export default function About() {
               </div>
               <div className="flex items-center">
                 <Calendar className="h-5 w-5 mr-2" />
-                <span>{language === 'fr' ? 'Fondée en 2020' : 'Founded in 2020'}</span>
+                <span>{language === 'fr' ? 'Fondée en 2025' : 'Founded in 2025'}</span>
               </div>
               <div className="flex items-center">
                 <Users className="h-5 w-5 mr-2" />
@@ -328,7 +298,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <Card key={index} className="group border-0 shadow-lg hover:shadow-brand transition-all duration-300 overflow-hidden">
                 {/* Member Image */}
@@ -365,13 +335,6 @@ export default function About() {
                         </a>
                       </Button>
                     )}
-                    {member.twitter && (
-                      <Button size="sm" variant="outline" asChild>
-                        <a href={member.twitter} target="_blank" rel="noopener noreferrer">
-                          <Twitter className="h-4 w-4" />
-                        </a>
-                      </Button>
-                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -403,7 +366,7 @@ export default function About() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
+              <Button size="lg" className="border-white/30 text-white hover:bg-white/10" asChild>
                 <Link to="/portfolio">
                   {language === 'fr' ? 'Voir nos réalisations' : 'View Our Work'}
                 </Link>

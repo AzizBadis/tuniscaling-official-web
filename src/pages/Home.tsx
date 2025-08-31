@@ -112,7 +112,7 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
+              <Button size="lg" className="border-white/30 text-white hover:bg-white/10" asChild>
                 <Link to="/portfolio">
                   {language === 'fr' ? 'Voir nos réalisations' : 'View Our Work'}
                 </Link>
@@ -241,7 +241,7 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
+              <Button size="lg" className="border-white/30 text-white hover:bg-white/10" asChild>
                 <Link to="/about">
                   {language === 'fr' ? 'Découvrir notre équipe' : 'Meet Our Team'}
                 </Link>

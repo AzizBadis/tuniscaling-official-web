@@ -123,9 +123,9 @@ export default function Contact() {
     {
       icon: Phone,
       title: language === 'fr' ? 'Téléphone' : 'Phone',
-      value: '+216 XX XXX XXX',
+      value: '+216 25 021 538',
       description: language === 'fr' ? 'Lun-Ven, 9h-18h' : 'Mon-Fri, 9AM-6PM',
-      link: 'tel:+216XXXXXXX'
+      link: 'tel:+21625021538'
     },
     {
       icon: MapPin,
@@ -192,7 +192,7 @@ export default function Contact() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
+              <Button size="lg" className="border-white/30 text-white hover:bg-white/10" asChild>
                 <a href="mailto:contact@tuniscaling.com">
                   {language === 'fr' ? 'Envoyer un email' : 'Send Email'}
                   <Mail className="ml-2 h-5 w-5" />
