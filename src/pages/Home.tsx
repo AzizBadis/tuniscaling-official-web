@@ -54,17 +54,17 @@ export default function Home() {
   const stats = [
     { 
       icon: Users, 
-      number: "50+", 
+      number: "25+", 
       label: language === 'fr' ? 'Clients Satisfaits' : 'Happy Clients' 
     },
     { 
       icon: Award, 
-      number: "100+", 
+      number: "40+", 
       label: language === 'fr' ? 'Projets Réalisés' : 'Projects Completed' 
     },
     { 
       icon: Star, 
-      number: "5.0", 
+      number: "4.7", 
       label: language === 'fr' ? 'Note Moyenne' : 'Average Rating' 
     },
     { 

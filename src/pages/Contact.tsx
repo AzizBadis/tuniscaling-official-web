@@ -50,10 +50,10 @@ export default function Contact() {
   ];
 
   const budgetRanges = [
-    { value: '5k-15k', label: '5,000€ - 15,000€' },
-    { value: '15k-30k', label: '15,000€ - 30,000€' },
-    { value: '30k-50k', label: '30,000€ - 50,000€' },
-    { value: '50k+', label: language === 'fr' ? '50,000€+' : '50,000€+' },
+    { value: '300dt-500dt', label: '300dt - 500dt' },
+    { value: '500dt-750dt', label: '500dt - 750dt' },
+    { value: '750dt-1000dt', label: '750dt - 1000dt' },
+    { value: '1000dt+', label: language === 'fr' ? '1000dt+' : '1000dt+' },
     { value: 'discuss', label: language === 'fr' ? 'À discuter' : 'To be discussed' }
   ];
 

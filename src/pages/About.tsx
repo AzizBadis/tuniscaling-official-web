@@ -57,8 +57,8 @@ export default function About() {
       name: "Nidhal Haouari",
       role: language === 'fr' ? 'CEO & Fondateur' : 'CEO & Founder',
       bio: language === 'fr' 
-        ? 'Expert en transformation digitale avec plus de 8 ans d\'expérience dans le développement de solutions technologiques innovantes.'
-        : 'Digital transformation expert with over 8 years of experience in developing innovative technology solutions.',
+        ? 'Développeur d’applications web et expert en solutions IA, créant des expériences digitales intuitives et des solutions intelligentes basées sur l’IA pour transformer les idées en résultats concrets.'
+        : 'Web App Developer & AI Solutions Expert, creating intuitive digital experiences and intelligent AI-driven solutions that transform ideas into impactful results.',
       image: "/api/placeholder/300/300",
       linkedin: "https://www.linkedin.com/in/nidhal-haouari-b1801124b/",
       github: "https://github.com/nidhalhaouari"
@@ -135,7 +135,7 @@ export default function About() {
               </div>
               <div className="flex items-center">
                 <Calendar className="h-5 w-5 mr-2" />
-                <span>{language === 'fr' ? 'Fondée en 2025' : 'Founded in 2025'}</span>
+                <span>{language === 'fr' ? 'Fondée en 2024' : 'Founded in 2024'}</span>
               </div>
               <div className="flex items-center">
                 <Users className="h-5 w-5 mr-2" />
