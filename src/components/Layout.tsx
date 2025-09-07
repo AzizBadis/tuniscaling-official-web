@@ -40,7 +40,7 @@ export default function Layout({ children }: LayoutProps) {
   <img 
     src="/lovable-uploads/87c2d9d0-c576-412f-94ea-9000707424c4.png" 
     alt="TuniScaling Logo" 
-    className="h-40 w-auto"  // Increased from h-8 to h-16
+    className="h-20 w-auto"  // Increased from h-8 to h-16
   />
 </Link>
 
@@ -148,7 +148,7 @@ export default function Layout({ children }: LayoutProps) {
               <img 
                 src="/lovable-uploads/87c2d9d0-c576-412f-94ea-9000707424c4.png" 
                 alt="TuniScaling Logo" 
-                className="h-40 w-auto"
+                className="h-20 w-auto"
               />
               <p className="text-sm text-muted-foreground">
                 {language === 'fr' 

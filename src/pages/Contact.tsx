@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com"
 import { 
   Mail, 
   Phone, 
@@ -72,46 +73,61 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Simulate form submission
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      toast({
-        title: language === 'fr' ? "Message envoyé !" : "Message sent!",
-        description: language === 'fr' 
-          ? "Nous vous répondrons dans les plus brefs délais."
-          : "We will get back to you as soon as possible.",
-      });
+  try {
+    await emailjs.send(
+      "service_f1yrzi2",   // replace with your EmailJS service ID
+      "template_gah245f",  // replace with your template ID
+      {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        service: formData.service,
+        budget: formData.budget,
+        timeline: formData.timeline,
+        message: formData.message,
+        preferredContact: formData.preferredContact,
+      },
+      "vR3OXrv5uKSrktakG"    // replace with your EmailJS public key
+    );
 
-      // Reset form
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        budget: '',
-        timeline: '',
-        message: '',
-        preferredContact: 'email'
-      });
-    } catch (error) {
-      toast({
-        title: language === 'fr' ? "Erreur" : "Error",
-        description: language === 'fr' 
-          ? "Une erreur s'est produite. Veuillez réessayer."
-          : "An error occurred. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    toast({
+      title: language === 'fr' ? "Message envoyé !" : "Message sent!",
+      description: language === 'fr' 
+        ? "Nous vous répondrons dans les plus brefs délais."
+        : "We will get back to you as soon as possible.",
+    });
 
+    // Reset form
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      company: '',
+      service: '',
+      budget: '',
+      timeline: '',
+      message: '',
+      preferredContact: 'email'
+    });
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+    toast({
+      title: language === 'fr' ? "Erreur" : "Error",
+      description: language === 'fr' 
+        ? "Une erreur s'est produite. Veuillez réessayer."
+        : "An error occurred. Please try again.",
+      variant: "destructive"
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
   const contactInfo = [
     {
       icon: Mail,
